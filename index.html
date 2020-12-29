@@ -50,7 +50,7 @@
     </style>
     <body>
 
-      <h1 id="title" class="mt-4">Free Registration Survey From</h1>
+      <h1 id="title" class="mt-2">Free Registration Survey From</h1>
     
      <div class="container"> 
         <div class="row">
@@ -58,9 +58,9 @@
           <div class="col-md-3"></div>
                   
           <div class="col-md-6">
-            <div class="card">
+            <div class="card border border-secondary">
               <div class="card-body">
-               <p class="card-title" id="description">Read first then fill up</p>
+               <p class="card-header" id="description"><b>Read first then fill up </b></p>
                 
                <form id="survey-form">
 
@@ -74,16 +74,19 @@
                 <input type="number" name="number" id="number" class="form-control" min="0" max="10" required placeholder="$"><br>
           
           
-                <label id="guitar-type-label" class="form-label">class</label>
-                <select id="dropdown" name="guitars">
-                  <option value="class-08">Class-08</option>
-                  <option value="class-09-10">Class-09 & 10</option>
-                  <option value="class-11">Class-11</option>
-                  <option value="class-12">Class-12</option>
+                <label id="guitar-type-label" class="form-label">Class:</label>
+                <select id="dropdown" class="browser-default custom-select mb-4 mr-5" name="class">
+                  <option value="" selected>Choose Class</option>
+                  <option value="1" >HSC</option>
+                  <option value="2">SSC</option>
+                  <option value="3">JSC</option>
                 </select>
-          
-                <label id="additional-comments-label" class="form-label">Additional Comments:</label>
-                <textarea placeholder="Additional Comments" class="form-control"></textarea><br>
+
+                <div>
+                  <label id="additional-comments-label" class="form-label">Additional Comments:</label>
+                  <textarea placeholder="Additional Comments" class="form-control"></textarea>
+                </div>
+                
           
                 <div id="button-area">
                   <label id="gender-label" class="form-label m-2">Gender:</label>
@@ -133,7 +136,12 @@
             
         </div>
       </div>
+     
 
     </body>
     <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <script>
+
+    </script>
 </html>
