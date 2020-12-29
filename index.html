@@ -1,9 +1,11 @@
 <html>
     <head>
         <title>Survey Form</title>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
     </head>
     <style>
-        body {
+        /* body {
         font-family: sans-serif;
         padding-left: 20%;
         padding-right: 20%;
@@ -37,50 +39,100 @@
         display      : inline-block;
         margin-left  : -28px;
         padding-left : 28px;
+      } */
+      #description{
+        text-align: center;
+        font-size: 20px;
+      }
+      #title{
+        text-align: center;
       }
     </style>
     <body>
 
-        <h1 id="title">Tell Me About Science</h1>
-    <p id="description">
-        Free Registration Survey From.....
-    </p>
-    <form id="survey-form">
-      <label id="name-label">Name:</label>
-      <input type="text" name="name" id="name" required placeholder="First Name"><br>
+      <h1 id="title" class="mt-4">Free Registration Survey From</h1>
+    
+     <div class="container"> 
+        <div class="row">
+          
+          <div class="col-md-3"></div>
+                  
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+               <p class="card-title" id="description">Read first then fill up</p>
+                
+               <form id="survey-form">
 
-      <label id="email-label">Email:</label>
-      <input type="email" name="email" id="email" required placeholder="Best Email"><br>
+                <label id="name-label" class="form-label">Name:</label>
+                <input type="text" name="name" id="name" class="form-control" required placeholder="First Name"><br>
+          
+                <label id="email-label" class="form-label">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" required placeholder="Best Email"><br>
+          
+                <label id="number-label" class="form-label">Number:</label>
+                <input type="number" name="number" id="number" class="form-control" min="0" max="10" required placeholder="$"><br>
+          
+          
+                <label id="guitar-type-label" class="form-label">class</label>
+                <select id="dropdown" name="guitars">
+                  <option value="class-08">Class-08</option>
+                  <option value="class-09-10">Class-09 & 10</option>
+                  <option value="class-11">Class-11</option>
+                  <option value="class-12">Class-12</option>
+                </select>
+          
+                <label id="additional-comments-label" class="form-label">Additional Comments:</label>
+                <textarea placeholder="Additional Comments" class="form-control"></textarea><br>
+          
+                <div id="button-area">
+                  <label id="gender-label" class="form-label m-2">Gender:</label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="red" value="male">
+                    <label class="form-check-label">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="red"  value="female">
+                    <label class="form-check-label" >Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="red"  value="other">
+                    <label class="form-check-label">Other</label>
+                  </div>
+                </div>
 
-      <label id="number-label">Number:</label>
-      <input type="number" name="number" id="number" min="0" max="10" required placeholder="$"><br>
+                <div id="button-area">
+                  <label id="interested-topic-label" class="form-label m-2">Interested Topic :</label>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox"  value="physics">
+                    <label class="form-check-label">Physics</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox"  value="chemistry">
+                    <label class="form-check-label" >Chemistry</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox"  value="math">
+                    <label class="form-check-label">Math</label>
+                  </div>
+                </div>
+
+                
+                
+                <div class="d-grid gap-2 col-6 mx-auto mt-2">
+                  <input type="submit" class="btn btn-outline-success" id="submit">
+                </div>
+              </form>
 
 
-      <label id="guitar-type-label">class</label>
-      <select id="dropdown" name="guitars">
-        <option value="class-08">Class-08</option>
-        <option value="class-09-10">Class-09 & 10</option>
-        <option value="class-11">Class-11</option>
-        <option value="class-12">Class-12</option>
-      </select>
+              </div>
+            </div>
+          </div>
 
-      <label id="additional-comments-label">Additional Comments:</label>
-      <textarea placeholder="Additional Comments"></textarea><br>
-
-      <div id="button-area">
-        <label id="gender-label">Gender:</label>
-        <input type="radio" class="radio-inline" name="gender" value="male"> Male<br>
-        <input type="radio" class="radio-inline" name="gender" value="female"> Female<br>
-        <input type="radio" class="radio-inline" name="gender" value="other"> Other
+          <div class="col-md-3"></div>
+            
+        </div>
       </div>
-      <div id="button-area">
-        <label id="interested-topic-label">Interested Topic</label>
-        <input type="checkbox" name="physics" value="Bike">Physics<br>
-        <input type="checkbox" name="chemistry" value="Car">Chemistry<br>
-        <input type="checkbox" name="math" value="Boat" checked>Math<br>
-      </div>
-      <input type="submit" id="submit">
-    </form>
 
     </body>
     <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
